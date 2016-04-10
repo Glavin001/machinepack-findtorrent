@@ -1,0 +1,18 @@
+{
+  "machine": "query-kickass",
+  "expectations": [
+    {
+      "using": {
+        "query": "The Office"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "query": "abcdefghijklmnopqrstuvwxyz-Glavin"
+      },
+      "outcome": "success",
+      "returns": []
+    }
+  ]
+}

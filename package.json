@@ -1,0 +1,57 @@
+{
+  "name": "machinepack-findtorrent",
+  "version": "0.1.0",
+  "description": "Find torrents from Kickass, EZTV, and more",
+  "scripts": {
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+  },
+  "keywords": [
+    "Find Torrent",
+    "machines",
+    "machinepack",
+    "torrents",
+    "torrent",
+    "kickass",
+    "eztv",
+    "movie",
+    "tv",
+    "show",
+    "episode",
+    "find",
+    "finder",
+    "query",
+    "search"
+  ],
+  "author": {
+    "name": "Glavin Wiechert",
+    "email": "glavin.wiechert@gmail.com",
+    "url": "https://github.com/Glavin001"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "cheerio": "^0.20.0",
+    "episode": "^0.2.0",
+    "lodash": "^4.9.0",
+    "machine": "^10.0.0",
+    "machinepack-http": "^2.4.0",
+    "parse-torrent-name": "^0.5.4",
+    "request": "^2.70.0"
+  },
+  "devDependencies": {
+    "test-machinepack-mocha": "^2.0.0"
+  },
+  "machinepack": {
+    "friendlyName": "Find Torrent",
+    "machineDir": "machines/",
+    "machines": [
+      "query-kickass",
+      "query-eztv",
+      "find-movie",
+      "find-episode",
+      "query-all",
+      "get-eztv-showlist",
+      "get-eztv-show-episodes"
+    ]
+  }
+}

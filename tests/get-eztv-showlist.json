@@ -1,0 +1,10 @@
+{
+  "machine": "get-eztv-showlist",
+  "expectations": [
+    {
+      "using": {
+      },
+      "outcome": "success"
+    }
+  ]
+}

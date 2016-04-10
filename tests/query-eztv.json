@@ -1,0 +1,19 @@
+{
+  "machine": "query-eztv",
+  "expectations": [
+    {
+      "using": {
+        "query": "The Office"
+      },
+      "outcome": "success",
+      "returns": []
+    },
+    {
+      "using": {
+        "query": "abcdefghijklmnopqrstuvwxyz-Glavin"
+      },
+      "outcome": "success",
+      "returns": []
+    }
+  ]
+}
