@@ -14,7 +14,11 @@ module.exports = {
 
 
   inputs: {
-
+    query: {
+      description: 'The torrent query',
+      required: true,
+      example: ''
+    },
   },
 
 
@@ -27,13 +31,20 @@ module.exports = {
 
   },
 
-
-  fn: function(inputs, exits
-    /**/
-  ) {
-    return exits.success();
+  fn: function(inputs, exits) {
+    var Machine = require('machine');
+    var queryAll = Machine.build(require('./query-all'));
+    queryAll({
+      query: inputs.query,
+      category: 'movies'
+    }).exec({
+      error: function(error) {
+        return exits.error(error);
+      },
+      success: function(torrents) {
+        return exits.success(torrents);
+      }
+    })
   },
-
-
 
 };

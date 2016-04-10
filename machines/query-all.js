@@ -43,6 +43,7 @@ module.exports = {
     var Machine = require('machine');
     var queryEZTV = Machine.build(require('./query-eztv'));
     var queryKickass = Machine.build(require('./query-kickass'));
+    var queryYTS = Machine.build(require('./query-yts'));
     var async = require('async');
     var _ = require('lodash');
 
@@ -53,10 +54,11 @@ module.exports = {
           category: inputs.category
         }).exec({
           error: function(error) {
-            return callback(error, []);
+            // return callback(error, []);
+            return callback(null, []);
           },
           success: function(torrents) {
-            return callback(null, torrents);
+            return callback(null, torrents || []);
           }
         });
       };
@@ -66,11 +68,15 @@ module.exports = {
     if (inputs.category === 'all' || inputs.category === 'tv') {
       providers.push(query(queryEZTV));
     }
+    if (inputs.category === 'all' || inputs.category === 'movies') {
+      providers.push(query(queryYTS));
+    }
     async.parallel(providers, function(error, results) {
       if (error) {
         return exits.error(error);
       }
       var torrents = _.flatten(results);
+      torrents = _.reverse(_.sortBy(torrents, ['verified', 'seeders', 'peers']));
       return exits.success(torrents);
     })
   },

@@ -51,7 +51,8 @@
       "find-episode",
       "query-all",
       "get-eztv-showlist",
-      "get-eztv-show-episodes"
+      "get-eztv-show-episodes",
+      "query-yts"
     ]
   }
 }

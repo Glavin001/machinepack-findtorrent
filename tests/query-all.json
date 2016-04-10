@@ -3,7 +3,13 @@
   "expectations": [
     {
       "using": {
-        "query": "The Office"
+        "query": "Marvels Agents of SHIELD"
+      },
+      "outcome": "success"
+    },
+    {
+      "using": {
+        "query": "Iron Man 2"
       },
       "outcome": "success"
     },
