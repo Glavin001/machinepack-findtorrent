@@ -22,6 +22,11 @@
     "query",
     "search"
   ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Glavin001/machinepack-findtorrent.git"
+  },
   "author": {
     "name": "Glavin Wiechert",
     "email": "glavin.wiechert@gmail.com",
