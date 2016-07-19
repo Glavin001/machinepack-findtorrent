@@ -9,7 +9,7 @@
 Find torrents from Kickass, EZTV, and more
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-findtorrent.svg)](http://badge.fury.io/js/machinepack-findtorrent) [![Build Status](https://travis-ci.org/mikermcneil/machinepack-findtorrent.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-findtorrent)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-findtorrent.svg)](http://badge.fury.io/js/machinepack-findtorrent) [![Build Status](https://travis-ci.org/Glavin001/machinepack-findtorrent.png?branch=master)](https://travis-ci.org/Glavin001/machinepack-findtorrent)
 
 ```sh
 $ npm install machinepack-findtorrent
