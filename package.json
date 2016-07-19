@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Find torrents from Kickass, EZTV, and more",
   "scripts": {
-    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js -t 5000"
   },
   "keywords": [
     "Find Torrent",
